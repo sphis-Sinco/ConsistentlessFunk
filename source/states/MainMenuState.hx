@@ -100,15 +100,16 @@ class MainMenuState extends MusicBeatState
 			menuItem.screenCenter(X);
 		}
 
-		var psychVer:FlxText = new FlxText(0, FlxG.height - 18, FlxG.width, "Psych Engine " + psychEngineVersion, 12);
-		var fnfVer:FlxText = new FlxText(0, FlxG.height - 18, FlxG.width, 'v${funkinVersion} (P-slice ${pSliceVersion})', 12);
-
-		psychVer.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, RIGHT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		fnfVer.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		var verString:String = 
+			'Funkin v${funkinVersion}'
+			+'\nPsych Engine v${psychEngineVersion}'
+			+'\nP-slice v${pSliceVersion}'
+			+'\nSinco Engine v${sincoVersion}';
 		
-		psychVer.scrollFactor.set();
+		var fnfVer:FlxText = new FlxText(0, FlxG.height, FlxG.width, verString, 12);
+		fnfVer.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		fnfVer.scrollFactor.set();
-		add(psychVer);
+		fnfVer.y -= fnfVer.height + 8;
 		add(fnfVer);
 		//var fnfVer:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' ", 12);
 	
