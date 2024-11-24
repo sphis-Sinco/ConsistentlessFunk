@@ -12,6 +12,7 @@ Based of P-Slice 2.1
 - Replaced every instance of `pSliceVersion` with `sincoVersion`
 - Application Icons (from purple to green) (This is temporary)
 - Title text to include ME! (sinco) in the beginning with the poeple who made it
+- Save File
 ### Added
 - `sincoVersion` variable to `MainMenuState` - Sinco Engine Version
 - VScode recommendations
