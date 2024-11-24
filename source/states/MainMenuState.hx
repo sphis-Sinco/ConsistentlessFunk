@@ -11,9 +11,13 @@ import options.OptionsState;
 
 class MainMenuState extends MusicBeatState
 {
-	public static var psychEngineVersion:String = '1.0'; // This is also used for Discord RPC
-	public static var pSliceVersion:String = '2.1'; 
-	public static var funkinVersion:String = '0.5.1'; // Version of funkin' we are emulationg
+	public static var funkinVersion:String = '0.5.1'; // Emulation
+
+	public static var psychEngineVersion:String = '1.0 (modified)'; // Base
+	public static var pSliceVersion:String = '2.1'; // Secondary Base
+
+	public static var sincoVersion:String = '1.0';  // Current
+
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;

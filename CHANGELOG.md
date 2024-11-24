@@ -9,3 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Based of P-Slice 2.1
 ### Changed
 - Engine now checks the [SincoEngine Github](https://github.com/sphis-Sinco/SincoEngine) for an Outdated version
+- Replaced every instance of `pSliceVersion` with `sincoVersion`
+### Added
+- `sincoVersion` variable to `MainMenuState` - Sinco Engine Version

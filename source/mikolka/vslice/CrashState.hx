@@ -120,7 +120,7 @@ class CrashState extends FlxState
 
 	function printError(error:CrashData)
 	{
-		printToTrace('P-SLICE ${MainMenuState.pSliceVersion}  (${error.message})');
+		printToTrace('SINCO ENGINE ${MainMenuState.sincoVersion}  (${error.message})');
 		textNextY += 35;
 		FlxTimer.wait(1 / 24, () ->
 		{
