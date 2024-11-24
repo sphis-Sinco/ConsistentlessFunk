@@ -777,7 +777,7 @@ class ResultState extends MusicBeatSubState
 
       if (params.storyMode)
       {
-        FlxG.sound.pause(); //? fix sound
+        FlxG.sound.music.stop(); // ok
         //TODO re-enable this
         // if (PlayerRegistry.instance.hasNewCharacter())
         // {

@@ -22,3 +22,5 @@ Based of P-Slice 2.1
 - Sinco Engine Version to `MainMenuState`
 ### Removed
 - `openfl.display.Shader` traces in Debug Builds
+### Fixed
+- Results music playing when it shouldnt
