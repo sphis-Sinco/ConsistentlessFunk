@@ -39,6 +39,9 @@ class CreditsState extends MusicBeatState
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['P-Slice Engine Team'],
+			['Sinco',			'sinco',			'Did everything for Sinco Engine',								 'https://www.youtube.com/@sphis-Sinco',									'00a000'],
+			[""],
+			['P-Slice Engine Team'],
 			['Mikolka9144',			'mikolka',			'Did everything for P-slice',								 'https://gamebanana.com/members/3329541',									'2ebcfa'],
 			['mcagabe19',			'lily',             'Porter of P-slice for mobile devices and creator of linc_luajit-rewritten (used for mobile builds)',                       'https://youtube.com/@mcagabe19',		'FFE7C0'],
 			[""],
@@ -93,25 +96,46 @@ class CreditsState extends MusicBeatState
 				if(credit[5] != null)
 					Mods.currentModDirectory = credit[5];
 
+				if (credit[5] != null)
+					Mods.currentModDirectory = credit[5];
+				var cred = credit[1];
 				var str:String = 'credits/missing_icon';
-				if(credit[1] != null && credit[1].length > 0)
+				var animated:Bool = false;
+				var scale:Float = 1;
+				if (cred != null && cred.length > 0)
 				{
-					var fileName = 'credits/' + credit[1];
-					if (Paths.fileExists('images/$fileName.png', IMAGE)) str = fileName;
-					else if (Paths.fileExists('images/$fileName-pixel.png', IMAGE)) str = fileName + '-pixel';
+					var fileName = 'credits/' + cred;
+					if (cred == 'sinco') // i love reusing code!
+						scale = 0.5;
+					if (Paths.fileExists('images/$fileName.xml', TEXT))
+						animated = true;
+					if (Paths.fileExists('images/$fileName.png', IMAGE))
+						str = fileName;
+					else if (Paths.fileExists('images/$fileName-pixel.png', IMAGE))
+						str = fileName + '-pixel';
 				}
-
-				var icon:AttachedSprite = new AttachedSprite(str);
-				if(str.endsWith('-pixel')) icon.antialiasing = false;
-				icon.xAdd = optionText.width + 10;
-				icon.sprTracker = optionText;
+				var icon:AttachedSprite;
+				
+				if (animated)
+					icon = new AttachedSprite(str, cred, null, true);
+				else
+					icon = new AttachedSprite(str);
 	
+				if (str.endsWith('-pixel'))
+					icon.antialiasing = false;
+				icon.xAdd = optionText.width + 10;
+				if (cred == 'sinco') {
+					icon.xAdd -= 40;
+					icon.yAdd -= 20;
+				}
+				icon.scale.set(scale, scale);
+				icon.sprTracker = optionText;
 				// using a FlxGroup is too much fuss!
 				iconArray.push(icon);
 				add(icon);
 				Mods.currentModDirectory = '';
-
-				if(curSelected == -1) curSelected = i;
+				if (curSelected == -1)
+					curSelected = i;
 			}
 			else optionText.alignment = CENTERED;
 		}

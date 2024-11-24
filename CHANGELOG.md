@@ -16,3 +16,4 @@ Based of P-Slice 2.1
 - `sincoVersion` variable to `MainMenuState` - Sinco Engine Version
 - VScode recommendations
 - `.sinco` folder (for stuff related to THIS engine)
+- Sinco Engine Credit tab
