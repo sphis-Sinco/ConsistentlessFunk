@@ -12,3 +12,4 @@ Based of P-Slice 2.1
 - Replaced every instance of `pSliceVersion` with `sincoVersion`
 ### Added
 - `sincoVersion` variable to `MainMenuState` - Sinco Engine Version
+- VScode recommendations
