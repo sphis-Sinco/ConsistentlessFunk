@@ -109,7 +109,7 @@ class MainMenuState extends MusicBeatState
 		var fnfVer:FlxText = new FlxText(0, FlxG.height, FlxG.width, verString, 12);
 		fnfVer.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		fnfVer.scrollFactor.set();
-		fnfVer.y -= fnfVer.height + 8;
+		fnfVer.y -= fnfVer.height + 2;
 		add(fnfVer);
 		//var fnfVer:FlxText = new FlxText(12, FlxG.height - 24, 0, "Friday Night Funkin' ", 12);
 	
