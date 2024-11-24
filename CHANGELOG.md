@@ -11,6 +11,7 @@ Based of P-Slice 2.1
 - Engine now checks the [SincoEngine Github](https://github.com/sphis-Sinco/SincoEngine) for an Outdated version
 - Replaced every instance of `pSliceVersion` with `sincoVersion`
 - Application Icons (from purple to green) (This is temporary)
+- Title text to include ME! (sinco) in the beginning with the poeple who made it
 ### Added
 - `sincoVersion` variable to `MainMenuState` - Sinco Engine Version
 - VScode recommendations
