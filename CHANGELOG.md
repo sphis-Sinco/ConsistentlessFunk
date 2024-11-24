@@ -20,3 +20,5 @@ Based of P-Slice 2.1
 - `.sinco` folder (for stuff related to THIS engine)
 - Sinco Engine Credit tab
 - Sinco Engine Version to `MainMenuState`
+### Removed
+- `openfl.display.Shader` traces in Debug Builds
