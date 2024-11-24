@@ -220,10 +220,10 @@ xsi:schemaLocation="http://lime.openfl.org/project/1.0.4 http://lime.openfl.org/
 
 	<!-- _________________________________ Custom _______________________________ -->
 
-	<assets path='art/iconOG.png' rename='icon.png' if="linux" />
+	<assets path='.sinco/iconOG.png' rename='icon.png' if="linux" />
 	
-	<icon path="art/icon16.png" size='16'/>
-	<icon path="art/icon32.png" size='32'/>
-	<icon path="art/icon64.png" size='64'/>
-	<icon path="art/iconOG.png" />
+	<icon path=".sinco/icon16.png" size='16'/>
+	<icon path=".sinco/icon32.png" size='32'/>
+	<icon path=".sinco/icon64.png" size='64'/>
+	<icon path=".sinco/iconOG.png" />
 </project>
